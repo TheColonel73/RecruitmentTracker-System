@@ -13,6 +13,10 @@ class Contact(models.Model):
         managed = False
         db_table = 'contact'
 
+    def __str__(self):
+        return self.name
+
+
 
 class DjangoMigrations(models.Model):
     app = models.CharField(max_length=255)
@@ -30,8 +34,11 @@ class Job(models.Model):
     description = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
     active = models.IntegerField(blank=True, null=True)
-    idcontact = models.ForeignKey(Contact, models.DO_NOTHING, db_column='idcontact')
+    idcontact = models.ForeignKey(Contact, models.DO_NOTHING, db_column='idcontact',verbose_name="Contact")
 
     class Meta:
         managed = False
         db_table = 'job'
+
+    def __str__(self):
+        return self.title

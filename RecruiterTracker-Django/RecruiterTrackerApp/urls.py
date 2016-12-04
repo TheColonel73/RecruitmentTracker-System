@@ -4,5 +4,5 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'contacts', views.ContactViewset)
-#router.register(r'tasks', views.TaskViewSet)
+router.register(r'jobs', views.JobViewset)
 #router.register(r'users', views.UserViewSet)
