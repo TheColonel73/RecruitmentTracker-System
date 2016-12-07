@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#TEST_RUNNER = 'RecruiterTrackerApp.testrunner.ManagedModelTestRunner'
 
 # Application definition
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'RecruiterTracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, r'templates\RecruiterTrackerApp\templates'),
+        'DIRS': [os.path.join(BASE_DIR, r'templates\RecruiterTrackerApp\../../templates/RecruiterTrackerApp/templates'),
 
                  ]
         ,
@@ -84,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR, 'Config/my.cnf'),
+            'read_default_file': os.path.join(BASE_DIR, 'Config/../../Config/my.cnf'),
         },
     }
 }

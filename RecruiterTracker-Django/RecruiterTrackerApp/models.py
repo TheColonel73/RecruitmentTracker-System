@@ -33,7 +33,7 @@ class Job(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
-    active = models.IntegerField(blank=True, null=True)
+    active = models.BooleanField()
     idcontact = models.ForeignKey(Contact, models.DO_NOTHING, db_column='idcontact',verbose_name="Contact")
 
     class Meta:
